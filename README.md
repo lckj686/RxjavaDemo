@@ -50,6 +50,7 @@ Schedulers.newThread():   新线程
 Schedulers.io():  io读写线程
 Schedulers.computation():  计算处理线程（可不用）
 
+```java
     /**
      * 多个订阅，并且调度
      * subscribeOn(): 事件产生的线程 -> 被观察者 线程
@@ -65,11 +66,11 @@ Schedulers.computation():  计算处理线程（可不用）
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(mObserver);
     }
-
+```
 
 ####3.3、变换
 纯粹的事件对象变换：被观察者事件对象是A  -> 观察者事件对象是B 纯粹的对象变换
-
+```java
 	public void singleMap() {
 	    Log.d(TAG, "singleMap()");
 	    Observable observable = Observable.create(new Observable.OnSubscribe<SourceData>() {
@@ -103,10 +104,10 @@ Schedulers.computation():  计算处理线程（可不用）
 	                }
 	            });
 	}
-
+```
 
 被观察者介入的事件对象变换：被观察者事件对象是A  -> 观察者事件对象是B 变换过程有中间被观察者介入
-
+```java
     public void flatMap() {
         Log.d(TAG, "flatMap()");
         Observable observable = Observable.create(new Observable.OnSubscribe<SourceData>() {
@@ -162,6 +163,7 @@ Schedulers.computation():  计算处理线程（可不用）
                     }
                 });
     }
+```
 
 ###4、demo
 平时这里是写参考材料的，但是已经写到开头去了。针对rxjava的一些抽象概念做了个demo  
