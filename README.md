@@ -165,7 +165,17 @@ Schedulers.computation():  计算处理线程（可不用）
     }
 ```
 
-###4、demo
+###subject
+subject = 观察者加被观察者
+ * 四种subject  
+ * AsyncSubject  
+ * BehaviorSubject  
+ * PublishSubject  
+ * ReplaySubject  
+参见:[https://github.com/mcxiaoke/RxDocs/blob/master/Subject.md](https://github.com/mcxiaoke/RxDocs/blob/master/Subject.md)   
+例子代码在demo中有
+
+###demo
 平时这里是写参考材料的，但是已经写到开头去了。针对rxjava的一些抽象概念做了个demo  
 demogithub地址:  
 [github][https://github.com/lckj686/RxjavaDemo](https://github.com/lckj686/RxjavaDemo)

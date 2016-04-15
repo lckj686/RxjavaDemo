@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
-import com.rxjava.sucer.master.Operate.OperateMap;
+import com.rxjava.sucer.master.Operate.OperateSubject;
+
+import retrofit2.http.Path;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -23,8 +25,17 @@ public class MainActivity extends AppCompatActivity {
 //        shedule.init();
 //        shedule.scheduleMultiple();
 
-        OperateMap map = new OperateMap();
-        map.mulFlatMap();
+//        OperateMap map = new OperateMap();
+//        map.mulFlatMap();
+//        button_run_scheduler = (Button) findViewById(R.id.button_run_scheduler);
+//        rx.Observable observable = RxView.clicks(button_run_scheduler);
+
+        OperateSubject subject = new OperateSubject();
+        subject.publishSubject();
+    }
+
+
+    private void sss(@Path(value = "123", encoded = false) Object ob){
 
     }
 
