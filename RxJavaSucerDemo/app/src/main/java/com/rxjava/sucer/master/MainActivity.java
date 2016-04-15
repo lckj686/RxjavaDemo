@@ -4,7 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
-import com.rxjava.sucer.master.Operate.OperateSubject;
+import com.rxjava.sucer.master.operate.OperateSubject;
+import com.rxjava.sucer.master.retrofit.DemoRetrofit;
 
 import retrofit2.http.Path;
 
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         OperateSubject subject = new OperateSubject();
         subject.publishSubject();
+
+        new DemoRetrofit().request();
     }
 
 

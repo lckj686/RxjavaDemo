@@ -1,4 +1,4 @@
-package com.rxjava.sucer.master.Operate;
+package com.rxjava.sucer.master.operate;
 
 import android.util.Log;
 
